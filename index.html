@@ -427,8 +427,8 @@
             </div>
 
             <div class="bg-white text-matcha-brown rounded-[2rem] shadow-2xl p-8 md:p-12 border-4 border-matcha-light/20 mx-auto">
-                <form action="#" method="POST" class="space-y-6">
-                    <input type="hidden" name="_token" value="8tdIEcVDvoLT9KlrsoYNyd3TszZw7d36DbcnmtZl" autocomplete="off">                    <div>
+                <form id="contact-form" action="https://formspree.io/f/xaqrrezg" method="POST" class="space-y-6">
+                    <div>
                         <label for="name" class="block text-sm font-bold mb-2 text-matcha-dark uppercase tracking-wider">Your Name</label>
                         <input type="text" id="name" name="name" required class="w-full px-5 py-4 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:border-matcha-base focus:ring-4 focus:ring-matcha-base/20 outline-none transition-all" placeholder="John Doe">
                     </div>
@@ -443,9 +443,11 @@
                         <textarea id="message" name="message" rows="5" required class="w-full px-5 py-4 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:border-matcha-base focus:ring-4 focus:ring-matcha-base/20 outline-none transition-all resize-none" placeholder="How can we collaborate?"></textarea>
                     </div>
 
-                    <button type="submit" class="w-full py-4 mt-4 bg-matcha-dark text-white font-bold text-lg rounded-xl shadow-lg hover:bg-matcha-base hover:-translate-y-1 transition-all">
+                    <button type="submit" id="submit-btn" class="w-full py-4 mt-4 bg-matcha-dark text-white font-bold text-lg rounded-xl shadow-lg hover:bg-matcha-base hover:-translate-y-1 transition-all">
                         Send Message
                     </button>
+                    
+                    <p id="form-status" class="text-center font-bold mt-4 opacity-0 transition-opacity duration-300"></p>
                 </form>
             </div>
 
@@ -496,6 +498,54 @@
             const scrollAmount = slider.offsetWidth * direction;
             slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
         }
+
+        // Form Submission Logic
+        const form = document.getElementById('contact-form');
+        const btn = document.getElementById('submit-btn');
+        const status = document.getElementById('form-status');
+
+        form.addEventListener('submit', async function(event) {
+            event.preventDefault(); // Stop the default page redirect
+            
+            // Change button state to show loading
+            btn.innerHTML = 'Sending...';
+            btn.classList.add('opacity-70', 'cursor-not-allowed');
+            btn.disabled = true;
+
+            const data = new FormData(event.target);
+
+            try {
+                const response = await fetch(event.target.action, {
+                    method: form.method,
+                    body: data,
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    // Success! Reset form and show success message
+                    form.reset();
+                    status.innerHTML = '✅ Message sent successfully!';
+                    status.classList.remove('opacity-0', 'text-red-500');
+                    status.classList.add('text-matcha-base'); // Make it green
+                } else {
+                    // Server error
+                    status.innerHTML = '❌ Oops! There was a problem submitting your form.';
+                    status.classList.remove('opacity-0');
+                    status.classList.add('text-red-500');
+                }
+            } catch (error) {
+                // Network error
+                status.innerHTML = '❌ Network error. Please try again.';
+                status.classList.remove('opacity-0');
+                status.classList.add('text-red-500');
+            }
+
+            // Restore button back to normal
+            btn.innerHTML = 'Send Message';
+            btn.classList.remove('opacity-70', 'cursor-not-allowed');
+            btn.disabled = false;
+        });
+
     </script>
 
 </body>
