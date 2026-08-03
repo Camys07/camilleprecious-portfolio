@@ -44,7 +44,7 @@
         html.dark #mobile-menu { background-color: #1e1e1e !important; border-color: #333 !important; }
         html.dark .text-gray-600 { color: #aaa !important; }
         html.dark .border-gray-200 { border-color: #444 !important; }
-        html.dark .bg-matcha-dark { background-color: #4cb480 !important; color: #121212 !important; } /* Bright button for contrast */
+        html.dark .bg-matcha-dark { background-color: #53ad70 !important; color: #121212 !important; } /* Bright button for contrast */
 
         /* Missing Tailwind Classes for Static HTML */
         @media (min-width: 768px) { .md\:hidden { display: none !important; } }
@@ -52,10 +52,11 @@
         .h-7 { height: 1.75rem !important; }
 
         /* Custom Accent Colors for Dark Mode Typography */
+        html.dark nav a.text-2xl,
         html.dark #projects .bg-matcha-cream h3.text-matcha-dark p.text-matcha-dark,
         html.dark #skills span.text-gray-700,
         html.dark #about p {
-            color: #4cb480 !important;
+            color: #53ad70 !important;
         }
     </style>
 </head>
@@ -63,7 +64,7 @@
 
     <nav class="fixed w-full z-50 bg-matcha-cream/80 backdrop-blur-lg border-b border-matcha-light/50 transition-all">
         <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
-            <a href="#" class="text-2xl font-extrabold text-matcha-dark tracking-tighter hover:text-matcha-base transition-colors">Camille Precious.</a>
+            <a href="#" class="text-2xl font-extrabold text-matcha-dark tracking-tighter hover:text-matcha-base transition-colorsx">Camille Precious.</a>
             
             <div class="hidden md:flex items-center space-x-8 font-semibold text-sm tracking-wide">
                 <a href="#about" class="text-matcha-brown/80 hover:text-matcha-base transition-colors">About</a>
