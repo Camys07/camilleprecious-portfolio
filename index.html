@@ -45,6 +45,11 @@
         html.dark .text-gray-600 { color: #aaa !important; }
         html.dark .border-gray-200 { border-color: #444 !important; }
         html.dark .bg-matcha-dark { background-color: #1CD0B4 !important; color: #121212 !important; } /* Bright button for contrast */
+
+        /* Missing Tailwind Classes for Static HTML */
+        @media (min-width: 768px) { .md\:hidden { display: none !important; } }
+        .w-7 { width: 1.75rem !important; }
+        .h-7 { height: 1.75rem !important; }
     </style>
 </head>
 <body class="bg-matcha-cream text-matcha-brown font-sans antialiased selection:bg-matcha-base selection:text-white">
@@ -142,7 +147,7 @@
                         Solving problems through logic and creativity.
                     </h3>
 
-                    <div class="space-y-6 text-matcha-brown/90 text-lg leading-relaxed">
+                    <div class="space-y-6 text-matcha-dark/60 text-lg leading-relaxed">
                         <p>
                             Hi! I'm Camille Precious D. Lalaguna. My journey into tech started with a deep curiosity about how digital systems work, which quickly evolved into a passion for building them from scratch. I recently graduated from the <strong class="text-matcha-dark font-semibold">National College of Science and Technology</strong> with a Bachelor of Science in Information Technology.
                         </p>
