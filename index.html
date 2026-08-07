@@ -340,7 +340,15 @@
         <div class="max-w-6xl mx-auto px-6 relative z-10">
             <div class="text-center max-w-2xl mx-auto mb-16">
                 <h2 class="text-xs font-black text-matcha-base uppercase tracking-[0.2em] mb-3">Portfolio</h2>
-                <h3 class="text-4xl font-extrabold text-matcha-dark tracking-tight">Featured Projects</h3>
+                <h3 class="text-4xl font-extrabold text-matcha-dark tracking-tight mb-6">Featured Projects</h3>
+                
+                <div class="inline-flex items-center gap-2 px-5 py-2 bg-amber-50 text-amber-600 border border-amber-200 rounded-full shadow-sm">
+                    <span class="relative flex h-3 w-3">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-3 w-3 bg-amber-500"></span>
+                    </span>
+                    <span class="text-sm font-bold tracking-wide">All projects are currently in active development</span>
+                </div>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
@@ -353,20 +361,29 @@
                         <span class="px-3 py-1 bg-white text-gray-600 border border-gray-200 text-xs rounded-full font-bold shadow-sm">Redis</span>
                     </div>
 
-                    <p class="text-[0.95rem] text-matcha-brown/80 mb-8 flex-grow leading-relaxed">
+                    <p class="text-[0.95rem] text-matcha-brown/80 mb-6 flex-grow leading-relaxed">
                         <strong class="text-matcha-dark">Overview:</strong> An enterprise-grade, multi-branch point-of-sale system built for scalable cafe operations. It features a built-in CRM, real-time inventory synchronization across branches via Redis, and a QR-based customer rewarding system designed to drive customer retention.
+                        <br><br>
+                        <span class="italic text-sm font-semibold opacity-90">
+                            ☁️ Hosted on a free Render server. Please allow 30-50 seconds for the application to spin up on your first load! 🍵
+                        </span>
                     </p>
+
+                    <div class="mb-8">
+                        <a href="https://juan-cafe-pos.onrender.com" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-matcha-dark text-white text-sm font-bold rounded-xl shadow-md hover:bg-matcha-base transition-all transform hover:-translate-y-0.5 active:scale-95">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            View Live Demo
+                        </a>
+                    </div>
 
                     <div class="relative rounded-2xl overflow-hidden border border-gray-200/50 bg-white mt-auto group/slider shadow-sm">
                         <button onclick="slide('slider-1', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/70 backdrop-blur-md text-matcha-dark w-10 h-10 flex items-center justify-center rounded-full opacity-0 group-hover/slider:opacity-100 transition-all z-10 shadow-lg border border-white/50 hover:bg-matcha-base hover:text-white">&larr;</button>
-
                         <div id="slider-1" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth hide-scrollbar h-72">
                             <img src="./images/jcafe1.png" class="w-full shrink-0 snap-center object-cover cursor-zoom-in hover:scale-105 transition-transform duration-500" onclick="openModal(this.src)" alt="Juan Cafe 1">
                             <img src="./images/jcafe2.png" class="w-full shrink-0 snap-center object-cover cursor-zoom-in" onclick="openModal(this.src)" alt="Juan Cafe 2">
                             <img src="./images/jcafe3.png" class="w-full shrink-0 snap-center object-cover cursor-zoom-in" onclick="openModal(this.src)" alt="Juan Cafe 3">
                             <img src="./images/jcafe4.png" class="w-full shrink-0 snap-center object-cover cursor-zoom-in" onclick="openModal(this.src)" alt="Juan Cafe 4">
                         </div>
-
                         <button onclick="slide('slider-1', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/70 backdrop-blur-md text-matcha-dark w-10 h-10 flex items-center justify-center rounded-full opacity-0 group-hover/slider:opacity-100 transition-all z-10 shadow-lg border border-white/50 hover:bg-matcha-base hover:text-white">&rarr;</button>
                     </div>
                 </div>
@@ -379,20 +396,29 @@
                         <span class="px-3 py-1 bg-white text-gray-600 border border-gray-200 text-xs rounded-full font-bold shadow-sm">Kubernetes</span>
                     </div>
 
-                    <p class="text-[0.95rem] text-matcha-brown/80 mb-8 flex-grow leading-relaxed">
+                    <p class="text-[0.95rem] text-matcha-brown/80 mb-6 flex-grow leading-relaxed">
                         <strong class="text-matcha-dark">Overview:</strong> A comprehensive Enterprise Resource Planning system customized for dental healthcare. It securely manages patient records, automates real-time inventory deductions for procedures, and implements strict Role-Based Access Control (RBAC) across a multi-tiered API architecture.
+                        <br><br>
+                        <span class="italic text-sm font-semibold opacity-90">
+                            ☁️ Hosted on a free Render server. Please allow 30-50 seconds for the application to spin up on your first load! 🍵
+                        </span>
                     </p>
+
+                    <div class="mb-8">
+                        <a href="https://basadent-frontend.onrender.com" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-matcha-dark text-white text-sm font-bold rounded-xl shadow-md hover:bg-matcha-base transition-all transform hover:-translate-y-0.5 active:scale-95">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            View Live Demo
+                        </a>
+                    </div>
 
                     <div class="relative rounded-2xl overflow-hidden border border-gray-200/50 bg-white mt-auto group/slider shadow-sm">
                         <button onclick="slide('slider-2', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/70 backdrop-blur-md text-matcha-dark w-10 h-10 flex items-center justify-center rounded-full opacity-0 group-hover/slider:opacity-100 transition-all z-10 shadow-lg border border-white/50 hover:bg-matcha-base hover:text-white">&larr;</button>
-
                         <div id="slider-2" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth hide-scrollbar h-72">
                             <img src="./images/basadent1.png" class="w-full shrink-0 snap-center object-cover cursor-zoom-in hover:scale-105 transition-transform duration-500" onclick="openModal(this.src)" alt="Basadent 1">
                             <img src="./images/basadent2.png" class="w-full shrink-0 snap-center object-cover cursor-zoom-in" onclick="openModal(this.src)" alt="Basadent 2">
                             <img src="./images/basadent3.png" class="w-full shrink-0 snap-center object-cover cursor-zoom-in" onclick="openModal(this.src)" alt="Basadent 3">
                             <img src="./images/basadent4.png" class="w-full shrink-0 snap-center object-cover cursor-zoom-in" onclick="openModal(this.src)" alt="Basadent 4">
                         </div>
-
                         <button onclick="slide('slider-2', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/70 backdrop-blur-md text-matcha-dark w-10 h-10 flex items-center justify-center rounded-full opacity-0 group-hover/slider:opacity-100 transition-all z-10 shadow-lg border border-white/50 hover:bg-matcha-base hover:text-white">&rarr;</button>
                     </div>
                 </div>
@@ -405,21 +431,58 @@
                         <span class="px-3 py-1 bg-white text-gray-600 border border-gray-200 text-xs rounded-full font-bold shadow-sm">MVC</span>
                     </div>
 
-                    <p class="text-[0.95rem] text-matcha-brown/80 mb-8 flex-grow leading-relaxed">
+                    <p class="text-[0.95rem] text-matcha-brown/80 mb-6 flex-grow leading-relaxed">
                         <strong class="text-matcha-dark">Overview:</strong> A modernization of a legacy community management platform into a robust Java-based framework. Utilizing Spring Boot, Docker, and Kubernetes, this system ensures high availability, secure data storage, and scalable performance for handling municipal records.
+                        <br><br>
+                        <span class="italic text-sm font-semibold opacity-90">
+                            ☁️ Hosted on a free Render server. Please allow 30-50 seconds for the application to spin up on your first load! 🍵
+                        </span>
                     </p>
+
+                    <div class="mb-8">
+                        <a href="https://bms-portal-arcm.onrender.com" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-matcha-dark text-white text-sm font-bold rounded-xl shadow-md hover:bg-matcha-base transition-all transform hover:-translate-y-0.5 active:scale-95">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            View Live Demo
+                        </a>
+                    </div>
 
                     <div class="relative rounded-2xl overflow-hidden border border-gray-200/50 bg-white mt-auto group/slider shadow-sm">
                         <button onclick="slide('slider-3', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/70 backdrop-blur-md text-matcha-dark w-10 h-10 flex items-center justify-center rounded-full opacity-0 group-hover/slider:opacity-100 transition-all z-10 shadow-lg border border-white/50 hover:bg-matcha-base hover:text-white">&larr;</button>
-
                         <div id="slider-3" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth hide-scrollbar h-72">
                             <img src="./images/bms1.png" class="w-full shrink-0 snap-center object-cover cursor-zoom-in hover:scale-105 transition-transform duration-500" onclick="openModal(this.src)" alt="BMS 1">
                             <img src="./images/bms2.png" class="w-full shrink-0 snap-center object-cover cursor-zoom-in" onclick="openModal(this.src)" alt="BMS 2">
                             <img src="./images/bms3.png" class="w-full shrink-0 snap-center object-cover cursor-zoom-in" onclick="openModal(this.src)" alt="BMS 3">
                             <img src="./images/bms4.png" class="w-full shrink-0 snap-center object-cover cursor-zoom-in" onclick="openModal(this.src)" alt="BMS 4">
                         </div>
-
                         <button onclick="slide('slider-3', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/70 backdrop-blur-md text-matcha-dark w-10 h-10 flex items-center justify-center rounded-full opacity-0 group-hover/slider:opacity-100 transition-all z-10 shadow-lg border border-white/50 hover:bg-matcha-base hover:text-white">&rarr;</button>
+                    </div>
+                </div>
+
+                <div class="bg-matcha-cream rounded-[2rem] border border-matcha-light/60 p-8 flex flex-col group hover:-translate-y-1 hover:shadow-xl hover:shadow-matcha-dark/5 transition-all duration-300">
+                    <h3 class="text-2xl font-bold text-matcha-dark mb-4">Movie Aggregator Engine</h3>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-3 py-1 bg-white text-gray-600 border border-gray-200 text-xs rounded-full font-bold shadow-sm">Next.js / React</span>
+                        <span class="px-3 py-1 bg-white text-gray-600 border border-gray-200 text-xs rounded-full font-bold shadow-sm">Node.js</span>
+                        <span class="px-3 py-1 bg-white text-gray-600 border border-gray-200 text-xs rounded-full font-bold shadow-sm">MongoDB</span>
+                    </div>
+
+                    <p class="text-[0.95rem] text-matcha-brown/80 mb-6 flex-grow leading-relaxed">
+                        <strong class="text-matcha-dark">Overview:</strong> A high-performance movie streaming aggregator mimicking a modern Netflix-like UI. It dynamically scrapes metadata and embeds third-party video streams. Features a custom-built Web Subtitle Engine that parses real-time .srt files and perfectly syncs overlays to the video player.
+                        <br><br>
+                        <span class="italic text-sm font-semibold opacity-90">
+                            ☁️ Hosted on a free Render server. Please allow 30-50 seconds for the application to spin up on your first load! 🍵
+                        </span>
+                    </p>
+
+                    <div class="mb-8">
+                        <a href="https://sineflix.onrender.com" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-matcha-dark text-white text-sm font-bold rounded-xl shadow-md hover:bg-matcha-base transition-all transform hover:-translate-y-0.5 active:scale-95">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            View Live Demo
+                        </a>
+                    </div>
+
+                    <div class="relative rounded-2xl overflow-hidden border border-gray-200/50 bg-matcha-light/20 mt-auto group/slider shadow-sm flex items-center justify-center h-72">
+                        <span class="text-matcha-dark font-bold animate-pulse">🎬 Screenshots Coming Soon...</span>
                     </div>
                 </div>
 
@@ -437,19 +500,17 @@
 
                     <div class="relative rounded-2xl overflow-hidden border border-gray-200/50 bg-white mt-auto group/slider shadow-sm">
                         <button onclick="slide('slider-4', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/70 backdrop-blur-md text-matcha-dark w-10 h-10 flex items-center justify-center rounded-full opacity-0 group-hover/slider:opacity-100 transition-all z-10 shadow-lg border border-white/50 hover:bg-matcha-base hover:text-white">&larr;</button>
-
                         <div id="slider-4" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth hide-scrollbar h-72">
                             <img src="./images/ship1.png" class="w-full shrink-0 snap-center object-cover cursor-zoom-in hover:scale-105 transition-transform duration-500" onclick="openModal(this.src)" alt="AIOps 1">
                             <img src="./images/ship2.png" class="w-full shrink-0 snap-center object-cover cursor-zoom-in" onclick="openModal(this.src)" alt="AIOps 2">
                             <img src="./images/ship3.png" class="w-full shrink-0 snap-center object-cover cursor-zoom-in" onclick="openModal(this.src)" alt="AIOps 3">
                             <img src="./images/ship4.png" class="w-full shrink-0 snap-center object-cover cursor-zoom-in" onclick="openModal(this.src)" alt="AIOps 4">
                         </div>
-
                         <button onclick="slide('slider-4', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/70 backdrop-blur-md text-matcha-dark w-10 h-10 flex items-center justify-center rounded-full opacity-0 group-hover/slider:opacity-100 transition-all z-10 shadow-lg border border-white/50 hover:bg-matcha-base hover:text-white">&rarr;</button>
                     </div>
                 </div>
 
-                <div class="bg-matcha-cream rounded-[2rem] border border-matcha-light/60 p-8 flex flex-col md:col-span-1 lg:col-span-2 lg:w-2/3 mx-auto group hover:-translate-y-1 hover:shadow-xl hover:shadow-matcha-dark/5 transition-all duration-300">
+                <div class="bg-matcha-cream rounded-[2rem] border border-matcha-light/60 p-8 flex flex-col group hover:-translate-y-1 hover:shadow-xl hover:shadow-matcha-dark/5 transition-all duration-300">
                     <h3 class="text-2xl font-bold text-matcha-dark mb-4">Lab Rat Experiment</h3>
                     <div class="flex flex-wrap gap-2 mb-6">
                         <span class="px-3 py-1 bg-white text-gray-600 border border-gray-200 text-xs rounded-full font-bold shadow-sm">Unity</span>
@@ -463,14 +524,12 @@
 
                     <div class="relative rounded-2xl overflow-hidden border border-gray-200/50 bg-white mt-auto group/slider shadow-sm">
                         <button onclick="slide('slider-5', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/70 backdrop-blur-md text-matcha-dark w-10 h-10 flex items-center justify-center rounded-full opacity-0 group-hover/slider:opacity-100 transition-all z-10 shadow-lg border border-white/50 hover:bg-matcha-base hover:text-white">&larr;</button>
-
                         <div id="slider-5" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth hide-scrollbar h-72">
                             <img src="./images/lab1.png" class="w-full shrink-0 snap-center object-cover cursor-zoom-in hover:scale-105 transition-transform duration-500" onclick="openModal(this.src)" alt="Lab Rat 1">
                             <img src="./images/lab2.png" class="w-full shrink-0 snap-center object-cover cursor-zoom-in" onclick="openModal(this.src)" alt="Lab Rat 2">
                             <img src="./images/lab3.png" class="w-full shrink-0 snap-center object-cover cursor-zoom-in" onclick="openModal(this.src)" alt="Lab Rat 3">
                             <img src="./images/lab4.png" class="w-full shrink-0 snap-center object-cover cursor-zoom-in" onclick="openModal(this.src)" alt="Lab Rat 4">
                         </div>
-
                         <button onclick="slide('slider-5', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/70 backdrop-blur-md text-matcha-dark w-10 h-10 flex items-center justify-center rounded-full opacity-0 group-hover/slider:opacity-100 transition-all z-10 shadow-lg border border-white/50 hover:bg-matcha-base hover:text-white">&rarr;</button>
                     </div>
                 </div>
