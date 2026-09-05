@@ -563,57 +563,66 @@
                 </p>
             </div>
 
-            <!-- Design Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                
-                <!-- Design Item 1 -->
-                <div class="group relative rounded-2xl overflow-hidden border border-matcha-light/50 shadow-sm hover:shadow-xl transition-all duration-300 bg-white aspect-square cursor-zoom-in" onclick="openModal(this.querySelector('img').src)">
-                    <img src="./images/LoHiTor_Poster.png" alt="Design 1" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                        <span class="text-white font-bold tracking-wide">LOHITOR Festival Poster</span>
+            <!-- Interactive Design Carousel -->
+            <div class="relative group/slider mt-8">
+                <!-- Left Arrow -->
+                <button onclick="slide('slider-designs', -1)" class="absolute -left-2 sm:-left-6 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-md text-matcha-dark w-12 h-12 flex items-center justify-center rounded-full opacity-0 group-hover/slider:opacity-100 transition-all z-20 shadow-xl border border-matcha-light hover:bg-matcha-base hover:text-white cursor-pointer">&larr;</button>
+
+                <!-- Slider Container -->
+                <div id="slider-designs" class="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth hide-scrollbar py-4 px-2">
+                    
+                    <!-- Design Item 1 -->
+                    <div class="shrink-0 snap-center w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] group relative rounded-2xl overflow-hidden border border-matcha-light/50 shadow-sm hover:shadow-xl transition-all duration-300 bg-white aspect-square cursor-zoom-in" onclick="openModal(this.querySelector('img').src)">
+                        <img src="./images/LoHiTor_Poster.png" alt="LOHITOR Festival Poster" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <span class="text-white font-bold tracking-wide">LOHITOR Festival Poster</span>
+                        </div>
                     </div>
+
+                    <!-- Design Item 2 -->
+                    <div class="shrink-0 snap-center w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] group relative rounded-2xl overflow-hidden border border-matcha-light/50 shadow-sm hover:shadow-xl transition-all duration-300 bg-white aspect-square cursor-zoom-in" onclick="openModal(this.querySelector('img').src)">
+                        <img src="./images/design2.png" alt="UI/UX Mobile Layout" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <span class="text-white font-bold tracking-wide">UI/UX Mobile Layout</span>
+                        </div>
+                    </div>
+
+                    <!-- Design Item 3 -->
+                    <div class="shrink-0 snap-center w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] group relative rounded-2xl overflow-hidden border border-matcha-light/50 shadow-sm hover:shadow-xl transition-all duration-300 bg-white aspect-square cursor-zoom-in" onclick="openModal(this.querySelector('img').src)">
+                        <img src="./images/AE_Editorial.png" alt="Editorial Poster" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <span class="text-white font-bold tracking-wide">Editorial Poster</span>
+                        </div>
+                    </div>
+
+                    <!-- Design Item 4 -->
+                    <div class="shrink-0 snap-center w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] group relative rounded-2xl overflow-hidden border border-matcha-light/50 shadow-sm hover:shadow-xl transition-all duration-300 bg-white aspect-square cursor-zoom-in" onclick="openModal(this.querySelector('img').src)">
+                        <img src="./images/jisoo_click.png" alt="Click Grunge Poster" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <span class="text-white font-bold tracking-wide">Click Grunge Poster</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Design Item 5 -->
+                    <div class="shrink-0 snap-center w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] group relative rounded-2xl overflow-hidden border border-matcha-light/50 shadow-sm hover:shadow-xl transition-all duration-300 bg-white aspect-square cursor-zoom-in" onclick="openModal(this.querySelector('img').src)">
+                        <img src="./images/MatchaLatte.png" alt="Product Promotional Poster" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <span class="text-white font-bold tracking-wide">Product Promotional Poster</span>
+                        </div>
+                    </div>
+
+                    <!-- Design Item 6 -->
+                    <div class="shrink-0 snap-center w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] group relative rounded-2xl overflow-hidden border border-matcha-light/50 shadow-sm hover:shadow-xl transition-all duration-300 bg-white aspect-square cursor-zoom-in" onclick="openModal(this.querySelector('img').src)">
+                        <img src="./images/MJ.png" alt="Music Player Fan Poster" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <span class="text-white font-bold tracking-wide">Music Player Fan Poster</span>
+                        </div>
+                    </div>
+
                 </div>
 
-                <!-- Design Item 2 -->
-                <div class="group relative rounded-2xl overflow-hidden border border-matcha-light/50 shadow-sm hover:shadow-xl transition-all duration-300 bg-white aspect-square cursor-zoom-in" onclick="openModal(this.querySelector('img').src)">
-                    <img src="./images/design2.png" alt="Design 2" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                        <span class="text-white font-bold tracking-wide">UI/UX Mobile Layout</span>
-                    </div>
-                </div>
-
-                <!-- Design Item 3 -->
-                <div class="group relative rounded-2xl overflow-hidden border border-matcha-light/50 shadow-sm hover:shadow-xl transition-all duration-300 bg-white aspect-square cursor-zoom-in" onclick="openModal(this.querySelector('img').src)">
-                    <img src="./images/AE_Editorial.png" alt="Design 3" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                        <span class="text-white font-bold tracking-wide">Editorial Poster</span>
-                    </div>
-                </div>
-
-                <!-- Design Item 4 -->
-                <div class="group relative rounded-2xl overflow-hidden border border-matcha-light/50 shadow-sm hover:shadow-xl transition-all duration-300 bg-white aspect-square cursor-zoom-in" onclick="openModal(this.querySelector('img').src)">
-                    <img src="./images/jisoo_click.png" alt="Design 4" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                        <span class="text-white font-bold tracking-wide">Click Grunge Poster</span>
-                    </div>
-                </div>
-                
-                <!-- Design Item 5 -->
-                <div class="group relative rounded-2xl overflow-hidden border border-matcha-light/50 shadow-sm hover:shadow-xl transition-all duration-300 bg-white aspect-square cursor-zoom-in" onclick="openModal(this.querySelector('img').src)">
-                    <img src="./images/MatchaLatte.png" alt="Design 5" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                        <span class="text-white font-bold tracking-wide">Product Promotional Poster</span>
-                    </div>
-                </div>
-
-                <!-- Design Item 6 -->
-                <div class="group relative rounded-2xl overflow-hidden border border-matcha-light/50 shadow-sm hover:shadow-xl transition-all duration-300 bg-white aspect-square cursor-zoom-in" onclick="openModal(this.querySelector('img').src)">
-                    <img src="./images/MJ.png" alt="Design 6" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                        <span class="text-white font-bold tracking-wide">Music Player Fan Poster</span>
-                    </div>
-                </div>
-
+                <!-- Right Arrow -->
+                <button onclick="slide('slider-designs', 1)" class="absolute -right-2 sm:-right-6 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-md text-matcha-dark w-12 h-12 flex items-center justify-center rounded-full opacity-0 group-hover/slider:opacity-100 transition-all z-20 shadow-xl border border-matcha-light hover:bg-matcha-base hover:text-white cursor-pointer">&rarr;</button>
             </div>
         </div>
     </section>
