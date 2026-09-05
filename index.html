@@ -554,7 +554,7 @@
             </div>
         </div>
         <section id="designs" class="py-24 lg:py-32 bg-matcha-cream relative">
-        <div class="max-w-5xl mx-auto px-6 relative z-10">
+        <div class="max-w-4xl mx-auto px-4 relative z-8">
             <div class="text-center max-w-2xl mx-auto mb-12">
                 <h2 class="text-xs font-black text-matcha-base uppercase tracking-[0.2em] mb-3">Creative Works</h2>
                 <h3 class="text-4xl font-extrabold text-matcha-dark tracking-tight mb-6">Design & Multimedia</h3>
@@ -565,16 +565,16 @@
 
             <!-- Compact White Card Container -->
             <div class="bg-white p-4 sm:p-6 rounded-[2rem] border border-matcha-light/60 shadow-lg mx-auto transition-all duration-300">
-                <div class="relative group/slider rounded-xl">
+                <div class="relative group/slider rounded-xl overflow-hidden">
                     
-                    <!-- Left Arrow (Now permanently visible on mobile!) -->
-                    <button onclick="slide('slider-designs', -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-md text-matcha-dark w-10 h-10 flex items-center justify-center rounded-full opacity-100 md:opacity-0 group-hover/slider:opacity-100 transition-all z-20 shadow-xl border border-gray-200 hover:bg-matcha-base hover:text-white cursor-pointer">&larr;</button>
+                    <!-- Left Arrow (Moved inside to left-3, always visible on mobile) -->
+                    <button onclick="slide('slider-designs', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-md text-matcha-dark w-10 h-10 flex items-center justify-center rounded-full md:opacity-0 group-hover/slider:opacity-100 transition-all z-20 shadow-xl border border-gray-200 hover:bg-matcha-base hover:text-white cursor-pointer">&larr;</button>
 
-                    <!-- Slider Container -->
-                    <div id="slider-designs" class="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth hide-scrollbar py-2 px-1">
+                    <!-- Slider Container (Smaller gaps and padding) -->
+                    <div id="slider-designs" class="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth hide-scrollbar p-2">
                         
                         <!-- Design Item 1 -->
-                        <div class="shrink-0 snap-center w-[65%] sm:w-[calc(33.333%-11px)] lg:w-[calc(25%-12px)] h-56 sm:h-64 group relative rounded-xl overflow-hidden border border-matcha-light/50 shadow-sm hover:shadow-xl transition-all duration-300 bg-matcha-cream cursor-zoom-in" onclick="openModal(this.querySelector('img').src)">
+                        <div class="shrink-0 snap-center w-[65%] sm:w-[calc(33.333%-11px)] lg:w-[calc(25%-12px)] group relative rounded-xl overflow-hidden border border-matcha-light/50 shadow-sm hover:shadow-xl transition-all duration-300 bg-matcha-cream aspect-[4/5] cursor-zoom-in" onclick="openModal(this.querySelector('img').src)">
                             <img src="./images/LoHiTor_Poster.png" alt="LOHITOR Festival Poster" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                                 <span class="text-white font-bold text-sm tracking-wide leading-tight">LOHITOR Festival</span>
@@ -582,7 +582,7 @@
                         </div>
 
                         <!-- Design Item 2 -->
-                        <div class="shrink-0 snap-center w-[65%] sm:w-[calc(33.333%-11px)] lg:w-[calc(25%-12px)] h-56 sm:h-64 group relative rounded-xl overflow-hidden border border-matcha-light/50 shadow-sm hover:shadow-xl transition-all duration-300 bg-matcha-cream cursor-zoom-in" onclick="openModal(this.querySelector('img').src)">
+                        <div class="shrink-0 snap-center w-[65%] sm:w-[calc(33.333%-11px)] lg:w-[calc(25%-12px)] group relative rounded-xl overflow-hidden border border-matcha-light/50 shadow-sm hover:shadow-xl transition-all duration-300 bg-matcha-cream aspect-[4/5] cursor-zoom-in" onclick="openModal(this.querySelector('img').src)">
                             <img src="./images/design2.png" alt="UI/UX Mobile Layout" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                                 <span class="text-white font-bold text-sm tracking-wide leading-tight">Mobile Layout</span>
@@ -590,7 +590,7 @@
                         </div>
 
                         <!-- Design Item 3 -->
-                        <div class="shrink-0 snap-center w-[65%] sm:w-[calc(33.333%-11px)] lg:w-[calc(25%-12px)] h-56 sm:h-64 group relative rounded-xl overflow-hidden border border-matcha-light/50 shadow-sm hover:shadow-xl transition-all duration-300 bg-matcha-cream cursor-zoom-in" onclick="openModal(this.querySelector('img').src)">
+                        <div class="shrink-0 snap-center w-[65%] sm:w-[calc(33.333%-11px)] lg:w-[calc(25%-12px)] group relative rounded-xl overflow-hidden border border-matcha-light/50 shadow-sm hover:shadow-xl transition-all duration-300 bg-matcha-cream aspect-[4/5] cursor-zoom-in" onclick="openModal(this.querySelector('img').src)">
                             <img src="./images/AE_Editorial.png" alt="Editorial Poster" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                                 <span class="text-white font-bold text-sm tracking-wide leading-tight">Editorial Poster</span>
@@ -598,7 +598,7 @@
                         </div>
 
                         <!-- Design Item 4 -->
-                        <div class="shrink-0 snap-center w-[65%] sm:w-[calc(33.333%-11px)] lg:w-[calc(25%-12px)] h-56 sm:h-64 group relative rounded-xl overflow-hidden border border-matcha-light/50 shadow-sm hover:shadow-xl transition-all duration-300 bg-matcha-cream cursor-zoom-in" onclick="openModal(this.querySelector('img').src)">
+                        <div class="shrink-0 snap-center w-[65%] sm:w-[calc(33.333%-11px)] lg:w-[calc(25%-12px)] group relative rounded-xl overflow-hidden border border-matcha-light/50 shadow-sm hover:shadow-xl transition-all duration-300 bg-matcha-cream aspect-[4/5] cursor-zoom-in" onclick="openModal(this.querySelector('img').src)">
                             <img src="./images/jisoo_click.png" alt="Click Grunge Poster" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                                 <span class="text-white font-bold text-sm tracking-wide leading-tight">Grunge Poster</span>
@@ -606,7 +606,7 @@
                         </div>
                         
                         <!-- Design Item 5 -->
-                        <div class="shrink-0 snap-center w-[65%] sm:w-[calc(33.333%-11px)] lg:w-[calc(25%-12px)] h-56 sm:h-64 group relative rounded-xl overflow-hidden border border-matcha-light/50 shadow-sm hover:shadow-xl transition-all duration-300 bg-matcha-cream cursor-zoom-in" onclick="openModal(this.querySelector('img').src)">
+                        <div class="shrink-0 snap-center w-[65%] sm:w-[calc(33.333%-11px)] lg:w-[calc(25%-12px)] group relative rounded-xl overflow-hidden border border-matcha-light/50 shadow-sm hover:shadow-xl transition-all duration-300 bg-matcha-cream aspect-[4/5] cursor-zoom-in" onclick="openModal(this.querySelector('img').src)">
                             <img src="./images/MatchaLatte.png" alt="Product Promotional Poster" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                                 <span class="text-white font-bold text-sm tracking-wide leading-tight">Promo Poster</span>
@@ -614,7 +614,7 @@
                         </div>
 
                         <!-- Design Item 6 -->
-                        <div class="shrink-0 snap-center w-[65%] sm:w-[calc(33.333%-11px)] lg:w-[calc(25%-12px)] h-56 sm:h-64 group relative rounded-xl overflow-hidden border border-matcha-light/50 shadow-sm hover:shadow-xl transition-all duration-300 bg-matcha-cream cursor-zoom-in" onclick="openModal(this.querySelector('img').src)">
+                        <div class="shrink-0 snap-center w-[65%] sm:w-[calc(33.333%-11px)] lg:w-[calc(25%-12px)] group relative rounded-xl overflow-hidden border border-matcha-light/50 shadow-sm hover:shadow-xl transition-all duration-300 bg-matcha-cream aspect-[4/5] cursor-zoom-in" onclick="openModal(this.querySelector('img').src)">
                             <img src="./images/MJ.png" alt="Music Player Fan Poster" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                                 <span class="text-white font-bold text-sm tracking-wide leading-tight">Fan Poster</span>
@@ -623,8 +623,8 @@
 
                     </div>
 
-                    <!-- Right Arrow (Now permanently visible on mobile!) -->
-                    <button onclick="slide('slider-designs', 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-md text-matcha-dark w-10 h-10 flex items-center justify-center rounded-full opacity-100 md:opacity-0 group-hover/slider:opacity-100 transition-all z-20 shadow-xl border border-gray-200 hover:bg-matcha-base hover:text-white cursor-pointer">&rarr;</button>
+                    <!-- Right Arrow (Moved inside to right-3, always visible on mobile) -->
+                    <button onclick="slide('slider-designs', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-md text-matcha-dark w-10 h-10 flex items-center justify-center rounded-full md:opacity-0 group-hover/slider:opacity-100 transition-all z-20 shadow-xl border border-gray-200 hover:bg-matcha-base hover:text-white cursor-pointer">&rarr;</button>
                 </div>
             </div>
         </div>
