@@ -546,81 +546,115 @@
         </div>
     </section> 
 
-    <section id="designs" class="py-16 lg:py-24 bg-matcha-cream relative">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
-            <div class="text-center max-w-2xl mx-auto mb-10">
+    <section id="designs" class="py-24 lg:py-32 bg-matcha-cream relative">
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="text-center max-w-2xl mx-auto mb-16">
                 <h2 class="text-xs font-black text-matcha-base uppercase tracking-[0.2em] mb-3">Creative Works</h2>
-                <h3 class="text-3xl lg:text-4xl font-extrabold text-matcha-dark tracking-tight mb-4">Design & Multimedia</h3>
-                <p class="text-matcha-brown/80 text-base leading-relaxed">
-                    A collection of my visual work spanning UI/UX design and photo manipulation. Swipe or use arrows to navigate. Click to expand.
+                <h3 class="text-4xl font-extrabold text-matcha-dark tracking-tight mb-6">Design & Multimedia</h3>
+                <p class="text-matcha-brown/80 text-lg leading-relaxed">
+                    A collection of my visual work spanning UI/UX design and photo manipulation. Click any image to view it in full resolution.
                 </p>
             </div>
 
-            <!-- THE FIX: Added 'aspect-video' right after 'w-full' -->
-            <div class="relative group/slider w-full aspect-video rounded-2xl overflow-hidden shadow-2xl bg-[#050505] border-[6px] border-white dark:border-[#1e1e1e] transition-colors">
+            <!-- New Grid Layout (Matches Projects Section UI) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <!-- Left Arrow -->
-                <button onclick="slide('slider-designs', -1)" class="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-md text-white w-12 h-12 flex items-center justify-center rounded-full opacity-100 md:opacity-0 group-hover/slider:opacity-100 transition-all z-20 shadow-lg border border-white/20 hover:bg-matcha-base hover:scale-105 cursor-pointer">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg>
-                </button>
-
-                <!-- Draggable Slider Container -->
-                <div id="slider-designs" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth hide-scrollbar w-full h-full cursor-grab active:cursor-grabbing">
-                    
-                    <!-- Design Item 1 -->
-                    <div class="shrink-0 snap-center w-full h-full relative group select-none cursor-zoom-in" onclick="openModal(this.querySelector('img').src)">
-                        <img src="./images/LoHiTor_Poster.png" alt="LOHITOR Festival Poster" class="absolute inset-0 w-full h-full object-contain pointer-events-none" draggable="false">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6 md:p-10 pointer-events-none">
-                            <span class="text-white font-bold text-xl md:text-3xl tracking-wide drop-shadow-md">LOHITOR Festival</span>
+                <!-- Design Item 1 -->
+                <div class="bg-white rounded-[2rem] border border-matcha-light/60 p-6 flex flex-col group hover:-translate-y-1 hover:shadow-xl hover:shadow-matcha-dark/5 transition-all duration-300">
+                    <div class="mb-5">
+                        <h3 class="text-xl font-bold text-matcha-dark mb-3">LOHITOR Festival</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-matcha-cream text-matcha-dark border border-matcha-light/50 text-xs rounded-full font-bold shadow-sm">Event Poster</span>
                         </div>
                     </div>
-
-                    <!-- Design Item 2 -->
-                    <div class="shrink-0 snap-center w-full h-full relative group select-none cursor-zoom-in" onclick="openModal(this.querySelector('img').src)">
-                        <img src="./images/design2.png" alt="UI/UX Mobile Layout" class="absolute inset-0 w-full h-full object-contain bg-white pointer-events-none" draggable="false">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6 md:p-10 pointer-events-none">
-                            <span class="text-white font-bold text-xl md:text-3xl tracking-wide drop-shadow-md">Mobile Layout</span>
+                    <div class="relative rounded-2xl overflow-hidden border border-gray-200/50 mt-auto cursor-zoom-in group/img bg-gray-50 shadow-sm" onclick="openModal('./images/LoHiTor_Poster.png')">
+                        <img src="./images/LoHiTor_Poster.png" alt="LOHITOR Festival Poster" class="w-full aspect-[4/3] object-cover group-hover/img:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-matcha-dark/0 group-hover/img:bg-matcha-dark/20 transition-colors duration-300 flex items-center justify-center">
+                            <svg class="w-10 h-10 text-white opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 drop-shadow-md" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
                         </div>
                     </div>
-
-                    <!-- Design Item 3 -->
-                    <div class="shrink-0 snap-center w-full h-full relative group select-none cursor-zoom-in" onclick="openModal(this.querySelector('img').src)">
-                        <img src="./images/AE_Editorial.png" alt="Editorial Poster" class="absolute inset-0 w-full h-full object-contain pointer-events-none" draggable="false">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6 md:p-10 pointer-events-none">
-                            <span class="text-white font-bold text-xl md:text-3xl tracking-wide drop-shadow-md">Editorial Poster</span>
-                        </div>
-                    </div>
-
-                    <!-- Design Item 4 -->
-                    <div class="shrink-0 snap-center w-full h-full relative group select-none cursor-zoom-in" onclick="openModal(this.querySelector('img').src)">
-                        <img src="./images/jisoo_click.png" alt="Click Grunge Poster" class="absolute inset-0 w-full h-full object-contain pointer-events-none" draggable="false">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6 md:p-10 pointer-events-none">
-                            <span class="text-white font-bold text-xl md:text-3xl tracking-wide drop-shadow-md">Grunge Poster</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Design Item 5 -->
-                    <div class="shrink-0 snap-center w-full h-full relative group select-none cursor-zoom-in" onclick="openModal(this.querySelector('img').src)">
-                        <img src="./images/MatchaLatte.png" alt="Product Promotional Poster" class="absolute inset-0 w-full h-full object-contain bg-white pointer-events-none" draggable="false">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6 md:p-10 pointer-events-none">
-                            <span class="text-white font-bold text-xl md:text-3xl tracking-wide drop-shadow-md">Promo Poster</span>
-                        </div>
-                    </div>
-
-                    <!-- Design Item 6 -->
-                    <div class="shrink-0 snap-center w-full h-full relative group select-none cursor-zoom-in" onclick="openModal(this.querySelector('img').src)">
-                        <img src="./images/MJ.png" alt="Music Player Fan Poster" class="absolute inset-0 w-full h-full object-contain pointer-events-none" draggable="false">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6 md:p-10 pointer-events-none">
-                            <span class="text-white font-bold text-xl md:text-3xl tracking-wide drop-shadow-md">Fan Poster</span>
-                        </div>
-                    </div>
-
                 </div>
 
-                <!-- Right Arrow -->
-                <button onclick="slide('slider-designs', 1)" class="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-md text-white w-12 h-12 flex items-center justify-center rounded-full opacity-100 md:opacity-0 group-hover/slider:opacity-100 transition-all z-20 shadow-lg border border-white/20 hover:bg-matcha-base hover:scale-105 cursor-pointer">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
-                </button>
+                <!-- Design Item 2 -->
+                <div class="bg-white rounded-[2rem] border border-matcha-light/60 p-6 flex flex-col group hover:-translate-y-1 hover:shadow-xl hover:shadow-matcha-dark/5 transition-all duration-300">
+                    <div class="mb-5">
+                        <h3 class="text-xl font-bold text-matcha-dark mb-3">Mobile Layout</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-matcha-cream text-matcha-dark border border-matcha-light/50 text-xs rounded-full font-bold shadow-sm">UI/UX Design</span>
+                        </div>
+                    </div>
+                    <div class="relative rounded-2xl overflow-hidden border border-gray-200/50 mt-auto cursor-zoom-in group/img bg-gray-50 shadow-sm" onclick="openModal('./images/design2.png')">
+                        <img src="./images/design2.png" alt="UI/UX Mobile Layout" class="w-full aspect-[4/3] object-cover group-hover/img:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-matcha-dark/0 group-hover/img:bg-matcha-dark/20 transition-colors duration-300 flex items-center justify-center">
+                            <svg class="w-10 h-10 text-white opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 drop-shadow-md" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Design Item 3 -->
+                <div class="bg-white rounded-[2rem] border border-matcha-light/60 p-6 flex flex-col group hover:-translate-y-1 hover:shadow-xl hover:shadow-matcha-dark/5 transition-all duration-300">
+                    <div class="mb-5">
+                        <h3 class="text-xl font-bold text-matcha-dark mb-3">Editorial Poster</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-matcha-cream text-matcha-dark border border-matcha-light/50 text-xs rounded-full font-bold shadow-sm">Typography & Layout</span>
+                        </div>
+                    </div>
+                    <div class="relative rounded-2xl overflow-hidden border border-gray-200/50 mt-auto cursor-zoom-in group/img bg-gray-50 shadow-sm" onclick="openModal('./images/AE_Editorial.png')">
+                        <img src="./images/AE_Editorial.png" alt="Editorial Poster" class="w-full aspect-[4/3] object-cover group-hover/img:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-matcha-dark/0 group-hover/img:bg-matcha-dark/20 transition-colors duration-300 flex items-center justify-center">
+                            <svg class="w-10 h-10 text-white opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 drop-shadow-md" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Design Item 4 -->
+                <div class="bg-white rounded-[2rem] border border-matcha-light/60 p-6 flex flex-col group hover:-translate-y-1 hover:shadow-xl hover:shadow-matcha-dark/5 transition-all duration-300">
+                    <div class="mb-5">
+                        <h3 class="text-xl font-bold text-matcha-dark mb-3">Grunge Poster</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-matcha-cream text-matcha-dark border border-matcha-light/50 text-xs rounded-full font-bold shadow-sm">Photo Manipulation</span>
+                        </div>
+                    </div>
+                    <div class="relative rounded-2xl overflow-hidden border border-gray-200/50 mt-auto cursor-zoom-in group/img bg-gray-50 shadow-sm" onclick="openModal('./images/jisoo_click.png')">
+                        <img src="./images/jisoo_click.png" alt="Click Grunge Poster" class="w-full aspect-[4/3] object-cover group-hover/img:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-matcha-dark/0 group-hover/img:bg-matcha-dark/20 transition-colors duration-300 flex items-center justify-center">
+                            <svg class="w-10 h-10 text-white opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 drop-shadow-md" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Design Item 5 -->
+                <div class="bg-white rounded-[2rem] border border-matcha-light/60 p-6 flex flex-col group hover:-translate-y-1 hover:shadow-xl hover:shadow-matcha-dark/5 transition-all duration-300">
+                    <div class="mb-5">
+                        <h3 class="text-xl font-bold text-matcha-dark mb-3">Promo Poster</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-matcha-cream text-matcha-dark border border-matcha-light/50 text-xs rounded-full font-bold shadow-sm">Brand Design</span>
+                        </div>
+                    </div>
+                    <div class="relative rounded-2xl overflow-hidden border border-gray-200/50 mt-auto cursor-zoom-in group/img bg-gray-50 shadow-sm" onclick="openModal('./images/MatchaLatte.png')">
+                        <img src="./images/MatchaLatte.png" alt="Product Promotional Poster" class="w-full aspect-[4/3] object-cover group-hover/img:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-matcha-dark/0 group-hover/img:bg-matcha-dark/20 transition-colors duration-300 flex items-center justify-center">
+                            <svg class="w-10 h-10 text-white opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 drop-shadow-md" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Design Item 6 -->
+                <div class="bg-white rounded-[2rem] border border-matcha-light/60 p-6 flex flex-col group hover:-translate-y-1 hover:shadow-xl hover:shadow-matcha-dark/5 transition-all duration-300">
+                    <div class="mb-5">
+                        <h3 class="text-xl font-bold text-matcha-dark mb-3">Fan Poster</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-matcha-cream text-matcha-dark border border-matcha-light/50 text-xs rounded-full font-bold shadow-sm">Graphic Design</span>
+                        </div>
+                    </div>
+                    <div class="relative rounded-2xl overflow-hidden border border-gray-200/50 mt-auto cursor-zoom-in group/img bg-gray-50 shadow-sm" onclick="openModal('./images/MJ.png')">
+                        <img src="./images/MJ.png" alt="Music Player Fan Poster" class="w-full aspect-[4/3] object-cover group-hover/img:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-matcha-dark/0 group-hover/img:bg-matcha-dark/20 transition-colors duration-300 flex items-center justify-center">
+                            <svg class="w-10 h-10 text-white opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 drop-shadow-md" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -699,7 +733,7 @@
             if (event.key === "Escape") closeModal();
         });
 
-        // Image Slider Logic
+        // Project Image Slider Logic
         function slide(sliderId, direction) {
             const slider = document.getElementById(sliderId);
             const scrollAmount = slider.offsetWidth * direction;
@@ -712,9 +746,8 @@
         const status = document.getElementById('form-status');
 
         form.addEventListener('submit', async function(event) {
-            event.preventDefault(); // Stop the default page redirect
+            event.preventDefault(); 
             
-            // Change button state to show loading
             btn.innerHTML = 'Sending...';
             btn.classList.add('opacity-70', 'cursor-not-allowed');
             btn.disabled = true;
@@ -729,25 +762,21 @@
                 });
 
                 if (response.ok) {
-                    // Success! Reset form and show success message
                     form.reset();
                     status.innerHTML = '✅ Message sent successfully!';
                     status.classList.remove('opacity-0', 'text-red-500');
-                    status.classList.add('text-matcha-base'); // Make it green
+                    status.classList.add('text-matcha-base'); 
                 } else {
-                    // Server error
                     status.innerHTML = '❌ Oops! There was a problem submitting your form.';
                     status.classList.remove('opacity-0');
                     status.classList.add('text-red-500');
                 }
             } catch (error) {
-                // Network error
                 status.innerHTML = '❌ Network error. Please try again.';
                 status.classList.remove('opacity-0');
                 status.classList.add('text-red-500');
             }
 
-            // Restore button back to normal
             btn.innerHTML = 'Send Message';
             btn.classList.remove('opacity-70', 'cursor-not-allowed');
             btn.disabled = false;
@@ -764,7 +793,7 @@
 
         menuLinks.forEach(link => {
             link.addEventListener('click', () => {
-                menu.classList.add('hidden'); // Close menu when a link is clicked
+                menu.classList.add('hidden'); 
             });
         });
 
@@ -773,7 +802,6 @@
         const themeToggleLightIcons = document.querySelectorAll('#theme-toggle-light-icon-desktop, #theme-toggle-light-icon-mobile');
         const themeToggleBtns = document.querySelectorAll('#theme-toggle-desktop, #theme-toggle-mobile');
 
-        // Set initial icon
         if (document.documentElement.classList.contains('dark')) {
             themeToggleLightIcons.forEach(icon => icon.classList.remove('hidden'));
         } else {
@@ -782,11 +810,9 @@
 
         themeToggleBtns.forEach(btn => {
             btn.addEventListener('click', function() {
-                // Toggle icons
                 themeToggleDarkIcons.forEach(icon => icon.classList.toggle('hidden'));
                 themeToggleLightIcons.forEach(icon => icon.classList.toggle('hidden'));
 
-                // Toggle and save theme
                 if (document.documentElement.classList.contains('dark')) {
                     document.documentElement.classList.remove('dark');
                     localStorage.setItem('color-theme', 'light');
@@ -796,71 +822,6 @@
                 }
             });
         });
-
-        // --- Auto-Play & Swipe Carousel Logic ---
-        const designSlider = document.getElementById('slider-designs');
-        let autoPlayInterval;
-        let isDragging = false;
-        let startPos, scrollPos;
-
-        // Auto-turn function
-        function startAutoPlay() {
-            autoPlayInterval = setInterval(() => {
-                if (!designSlider) return;
-                // If reached the end, loop back to start smoothly
-                if (designSlider.scrollLeft + designSlider.clientWidth >= designSlider.scrollWidth - 10) {
-                    designSlider.scrollTo({ left: 0, behavior: 'smooth' });
-                } else {
-                    slide('slider-designs', 1);
-                }
-            }, 3500); // Turns every 3.5 seconds
-        }
-
-        function stopAutoPlay() {
-            clearInterval(autoPlayInterval);
-        }
-
-        if (designSlider) {
-            // Initialize Auto-Play
-            startAutoPlay();
-
-            // Pause on Hover or Touch
-            designSlider.addEventListener('mouseenter', stopAutoPlay);
-            designSlider.addEventListener('mouseleave', startAutoPlay);
-            designSlider.addEventListener('touchstart', stopAutoPlay, {passive: true});
-            designSlider.addEventListener('touchend', startAutoPlay);
-
-            // Mouse Drag (Swipe) Logic for Desktop
-            designSlider.addEventListener('mousedown', (e) => {
-                isDragging = true;
-                designSlider.classList.remove('scroll-smooth', 'snap-x', 'snap-mandatory'); // Stop snapping while dragging
-                startPos = e.pageX - designSlider.offsetLeft;
-                scrollPos = designSlider.scrollLeft;
-                stopAutoPlay();
-            });
-
-            designSlider.addEventListener('mouseleave', () => {
-                if (!isDragging) return;
-                isDragging = false;
-                designSlider.classList.add('scroll-smooth', 'snap-x', 'snap-mandatory');
-                startAutoPlay();
-            });
-
-            designSlider.addEventListener('mouseup', () => {
-                isDragging = false;
-                designSlider.classList.add('scroll-smooth', 'snap-x', 'snap-mandatory');
-                startAutoPlay();
-            });
-
-            designSlider.addEventListener('mousemove', (e) => {
-                if (!isDragging) return;
-                e.preventDefault();
-                const x = e.pageX - designSlider.offsetLeft;
-                const walk = (x - startPos) * 1.5; // Drag speed multiplier
-                designSlider.scrollLeft = scrollPos - walk;
-            });
-        }
-        
     </script>
 
 </body>
