@@ -13,10 +13,10 @@
         }
     </script>
 
-    <link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}">
+    <link rel="icon" type="image/png" href="./images/logo.png">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     
-    @vite('resources/css/app.css')
+    <link rel="stylesheet" href="./build/assets/app-BcD-VeBY.css">
     
     <style>
         html { scroll-behavior: smooth; }
@@ -27,7 +27,7 @@
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
         /* --- CLAYMORPHISM CORE ENGINE --- */
-        body { background-color: #f0f4f2 !important; } /* Soft off-white to make 3D white shadows pop */
+        body { background-color: #f0f4f2 !important; } 
         
         .clay-card {
             background: #f0f4f2;
@@ -236,7 +236,7 @@
 
                 <div class="lg:w-1/2 w-full relative group flex justify-center lg:justify-end">
                     <div class="clay-card absolute inset-0 transform translate-x-4 translate-y-4 opacity-50 max-w-sm mx-auto w-full aspect-[4/5]"></div>
-                    <img src="{{ asset('images/grad.jpg') }}" alt="Camille Precious Lalaguna" class="relative z-10 rounded-[2rem] w-full max-w-sm aspect-[4/5] object-cover border-4 border-white shadow-xl">
+                    <img src="./images/grad.jpg" alt="Camille Precious Lalaguna" class="relative z-10 rounded-[2rem] w-full max-w-sm aspect-[4/5] object-cover border-4 border-white shadow-xl">
                     <div class="absolute -bottom-6 sm:-left-4 lg:-left-12 clay-card px-6 py-4 z-20 flex items-center gap-4 hidden sm:flex">
                         <div class="w-12 h-12 clay-pill flex items-center justify-center text-matcha-base font-black text-xl">
                             UX
@@ -271,7 +271,7 @@
                             <svg class="w-5 h-5 text-matcha-base" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                             Email Me
                         </a>
-                        <a href="{{ asset('resume.pdf') }}" download="Camille_Lalaguna_Resume.pdf" target="_blank" class="px-6 py-3.5 clay-btn font-bold flex items-center gap-2.5">
+                        <a href="./resume.pdf" download="Camille_Lalaguna_Resume.pdf" target="_blank" class="px-6 py-3.5 clay-btn font-bold flex items-center gap-2.5">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                             Download Resume
                         </a>
@@ -408,7 +408,7 @@
         </div>
     </section>
 
-    <!-- DESIGNS SECTION (Grid Layout as requested) -->
+    <!-- DESIGNS SECTION (SAFELY RESTORED!) -->
     <section id="designs" class="py-24 lg:py-32 relative">
         <div class="max-w-6xl mx-auto px-6 relative z-10">
             <div class="text-center max-w-2xl mx-auto mb-16">
@@ -422,7 +422,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
                 <!-- Design 1 -->
-                <div class="clay-card p-6 flex flex-col group cursor-zoom-in" onclick="openModal('{{ asset('images/LoHiTor_Poster.png') }}')">
+                <div class="clay-card p-6 flex flex-col group cursor-zoom-in" onclick="openModal('./images/LoHiTor_Poster.png')">
                     <div class="mb-5">
                         <h3 class="text-xl font-bold text-matcha-dark mb-3">LOHITOR Festival</h3>
                         <div class="flex flex-wrap gap-2">
@@ -431,12 +431,12 @@
                         </div>
                     </div>
                     <div class="relative rounded-2xl overflow-hidden mt-auto bg-[#1e1e1e] shadow-inner border border-gray-200/20">
-                        <img src="{{ asset('images/LoHiTor_Poster.png') }}" alt="LOHITOR Festival Poster" class="w-full aspect-[4/3] object-contain group-hover:scale-105 transition-transform duration-500">
+                        <img src="./images/LoHiTor_Poster.png" alt="LOHITOR Festival Poster" class="w-full aspect-[4/3] object-contain group-hover:scale-105 transition-transform duration-500">
                     </div>
                 </div>
 
                 <!-- Design 2 -->
-                <div class="clay-card p-6 flex flex-col group cursor-zoom-in" onclick="openModal('{{ asset('images/design2.png') }}')">
+                <div class="clay-card p-6 flex flex-col group cursor-zoom-in" onclick="openModal('./images/design2.png')">
                     <div class="mb-5">
                         <h3 class="text-xl font-bold text-matcha-dark mb-3">Mobile Application</h3>
                         <div class="flex flex-wrap gap-2">
@@ -445,12 +445,12 @@
                         </div>
                     </div>
                     <div class="relative rounded-2xl overflow-hidden mt-auto bg-[#1e1e1e] shadow-inner border border-gray-200/20">
-                        <img src="{{ asset('images/design2.png') }}" alt="UI/UX Mobile Layout" class="w-full aspect-[4/3] object-contain bg-white group-hover:scale-105 transition-transform duration-500">
+                        <img src="./images/design2.png" alt="UI/UX Mobile Layout" class="w-full aspect-[4/3] object-contain bg-white group-hover:scale-105 transition-transform duration-500">
                     </div>
                 </div>
 
                 <!-- Design 3 -->
-                <div class="clay-card p-6 flex flex-col group cursor-zoom-in" onclick="openModal('{{ asset('images/AE_Editorial.png') }}')">
+                <div class="clay-card p-6 flex flex-col group cursor-zoom-in" onclick="openModal('./images/AE_Editorial.png')">
                     <div class="mb-5">
                         <h3 class="text-xl font-bold text-matcha-dark mb-3">Editorial Poster</h3>
                         <div class="flex flex-wrap gap-2">
@@ -459,12 +459,12 @@
                         </div>
                     </div>
                     <div class="relative rounded-2xl overflow-hidden mt-auto bg-[#1e1e1e] shadow-inner border border-gray-200/20">
-                        <img src="{{ asset('images/AE_Editorial.png') }}" alt="Editorial Poster" class="w-full aspect-[4/3] object-contain group-hover:scale-105 transition-transform duration-500">
+                        <img src="./images/AE_Editorial.png" alt="Editorial Poster" class="w-full aspect-[4/3] object-contain group-hover:scale-105 transition-transform duration-500">
                     </div>
                 </div>
 
                 <!-- Design 4 -->
-                <div class="clay-card p-6 flex flex-col group cursor-zoom-in" onclick="openModal('{{ asset('images/jisoo_click.png') }}')">
+                <div class="clay-card p-6 flex flex-col group cursor-zoom-in" onclick="openModal('./images/jisoo_click.png')">
                     <div class="mb-5">
                         <h3 class="text-xl font-bold text-matcha-dark mb-3">Click Grunge</h3>
                         <div class="flex flex-wrap gap-2">
@@ -472,12 +472,12 @@
                         </div>
                     </div>
                     <div class="relative rounded-2xl overflow-hidden mt-auto bg-[#1e1e1e] shadow-inner border border-gray-200/20">
-                        <img src="{{ asset('images/jisoo_click.png') }}" alt="Click Grunge Poster" class="w-full aspect-[4/3] object-contain group-hover:scale-105 transition-transform duration-500">
+                        <img src="./images/jisoo_click.png" alt="Click Grunge Poster" class="w-full aspect-[4/3] object-contain group-hover:scale-105 transition-transform duration-500">
                     </div>
                 </div>
 
                 <!-- Design 5 -->
-                <div class="clay-card p-6 flex flex-col group cursor-zoom-in" onclick="openModal('{{ asset('images/MatchaLatte.png') }}')">
+                <div class="clay-card p-6 flex flex-col group cursor-zoom-in" onclick="openModal('./images/MatchaLatte.png')">
                     <div class="mb-5">
                         <h3 class="text-xl font-bold text-matcha-dark mb-3">Matcha Latte Promo</h3>
                         <div class="flex flex-wrap gap-2">
@@ -486,12 +486,12 @@
                         </div>
                     </div>
                     <div class="relative rounded-2xl overflow-hidden mt-auto bg-[#1e1e1e] shadow-inner border border-gray-200/20">
-                        <img src="{{ asset('images/MatchaLatte.png') }}" alt="Product Promotional Poster" class="w-full aspect-[4/3] object-contain bg-white group-hover:scale-105 transition-transform duration-500">
+                        <img src="./images/MatchaLatte.png" alt="Product Promotional Poster" class="w-full aspect-[4/3] object-contain bg-white group-hover:scale-105 transition-transform duration-500">
                     </div>
                 </div>
 
                 <!-- Design 6 -->
-                <div class="clay-card p-6 flex flex-col group cursor-zoom-in" onclick="openModal('{{ asset('images/MJ.png') }}')">
+                <div class="clay-card p-6 flex flex-col group cursor-zoom-in" onclick="openModal('./images/MJ.png')">
                     <div class="mb-5">
                         <h3 class="text-xl font-bold text-matcha-dark mb-3">Music Player Fan Art</h3>
                         <div class="flex flex-wrap gap-2">
@@ -499,7 +499,7 @@
                         </div>
                     </div>
                     <div class="relative rounded-2xl overflow-hidden mt-auto bg-[#1e1e1e] shadow-inner border border-gray-200/20">
-                        <img src="{{ asset('images/MJ.png') }}" alt="Music Player Fan Poster" class="w-full aspect-[4/3] object-contain group-hover:scale-105 transition-transform duration-500">
+                        <img src="./images/MJ.png" alt="Music Player Fan Poster" class="w-full aspect-[4/3] object-contain group-hover:scale-105 transition-transform duration-500">
                     </div>
                 </div>
 
@@ -552,10 +552,10 @@
                     <div class="relative rounded-2xl overflow-hidden shadow-inner bg-[#1e1e1e] mt-auto">
                         <button onclick="slide('slider-1', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 clay-btn-secondary w-10 h-10 flex items-center justify-center opacity-0 group-hover:opacity-100 z-10">&larr;</button>
                         <div id="slider-1" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth hide-scrollbar aspect-video w-full">
-                            <img src="{{ asset('images/jcafe1.png') }}" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
-                            <img src="{{ asset('images/jcafe2.png') }}" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
-                            <img src="{{ asset('images/jcafe3.png') }}" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
-                            <img src="{{ asset('images/jcafe4.png') }}" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
+                            <img src="./images/jcafe1.png" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
+                            <img src="./images/jcafe2.png" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
+                            <img src="./images/jcafe3.png" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
+                            <img src="./images/jcafe4.png" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
                         </div>
                         <button onclick="slide('slider-1', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 clay-btn-secondary w-10 h-10 flex items-center justify-center opacity-0 group-hover:opacity-100 z-10">&rarr;</button>
                     </div>
@@ -588,10 +588,10 @@
                     <div class="relative rounded-2xl overflow-hidden shadow-inner bg-[#1e1e1e] mt-auto">
                         <button onclick="slide('slider-2', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 clay-btn-secondary w-10 h-10 flex items-center justify-center opacity-0 group-hover:opacity-100 z-10">&larr;</button>
                         <div id="slider-2" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth hide-scrollbar aspect-video w-full">
-                            <img src="{{ asset('images/basadent1.png') }}" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
-                            <img src="{{ asset('images/basadent2.png') }}" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
-                            <img src="{{ asset('images/basadent3.png') }}" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
-                            <img src="{{ asset('images/basadent4.png') }}" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
+                            <img src="./images/basadent1.png" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
+                            <img src="./images/basadent2.png" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
+                            <img src="./images/basadent3.png" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
+                            <img src="./images/basadent4.png" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
                         </div>
                         <button onclick="slide('slider-2', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 clay-btn-secondary w-10 h-10 flex items-center justify-center opacity-0 group-hover:opacity-100 z-10">&rarr;</button>
                     </div>
@@ -624,10 +624,10 @@
                     <div class="relative rounded-2xl overflow-hidden shadow-inner bg-[#1e1e1e] mt-auto">
                         <button onclick="slide('slider-4', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 clay-btn-secondary w-10 h-10 flex items-center justify-center opacity-0 group-hover:opacity-100 z-10">&larr;</button>
                         <div id="slider-4" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth hide-scrollbar aspect-video w-full">
-                            <img src="{{ asset('images/sineflix.png') }}" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
-                            <img src="{{ asset('images/sineflix1.png') }}" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
-                            <img src="{{ asset('images/sineflix2.png') }}" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
-                            <img src="{{ asset('images/sineflix3.png') }}" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
+                            <img src="./images/sineflix.png" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
+                            <img src="./images/sineflix1.png" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
+                            <img src="./images/sineflix2.png" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
+                            <img src="./images/sineflix3.png" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
                         </div>
                         <button onclick="slide('slider-4', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 clay-btn-secondary w-10 h-10 flex items-center justify-center opacity-0 group-hover:opacity-100 z-10">&rarr;</button>
                     </div>
@@ -660,10 +660,10 @@
                     <div class="relative rounded-2xl overflow-hidden shadow-inner bg-[#1e1e1e] mt-auto">
                         <button onclick="slide('slider-3', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 clay-btn-secondary w-10 h-10 flex items-center justify-center opacity-0 group-hover:opacity-100 z-10">&larr;</button>
                         <div id="slider-3" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth hide-scrollbar aspect-video w-full">
-                            <img src="{{ asset('images/bms1.png') }}" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
-                            <img src="{{ asset('images/bms2.png') }}" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
-                            <img src="{{ asset('images/bms3.png') }}" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
-                            <img src="{{ asset('images/bms4.png') }}" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
+                            <img src="./images/bms1.png" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
+                            <img src="./images/bms2.png" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
+                            <img src="./images/bms3.png" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
+                            <img src="./images/bms4.png" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
                         </div>
                         <button onclick="slide('slider-3', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 clay-btn-secondary w-10 h-10 flex items-center justify-center opacity-0 group-hover:opacity-100 z-10">&rarr;</button>
                     </div>
@@ -685,10 +685,10 @@
                     <div class="relative rounded-2xl overflow-hidden shadow-inner bg-[#1e1e1e] mt-auto">
                         <button onclick="slide('slider-5', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 clay-btn-secondary w-10 h-10 flex items-center justify-center opacity-0 group-hover:opacity-100 z-10">&larr;</button>
                         <div id="slider-5" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth hide-scrollbar aspect-video w-full">
-                            <img src="{{ asset('images/ship1.png') }}" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
-                            <img src="{{ asset('images/ship2.png') }}" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
-                            <img src="{{ asset('images/ship3.png') }}" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
-                            <img src="{{ asset('images/ship4.png') }}" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
+                            <img src="./images/ship1.png" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
+                            <img src="./images/ship2.png" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
+                            <img src="./images/ship3.png" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
+                            <img src="./images/ship4.png" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
                         </div>
                         <button onclick="slide('slider-5', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 clay-btn-secondary w-10 h-10 flex items-center justify-center opacity-0 group-hover:opacity-100 z-10">&rarr;</button>
                     </div>
@@ -710,10 +710,10 @@
                     <div class="relative rounded-2xl overflow-hidden shadow-inner bg-[#1e1e1e] mt-auto">
                         <button onclick="slide('slider-6', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 clay-btn-secondary w-10 h-10 flex items-center justify-center opacity-0 group-hover:opacity-100 z-10">&larr;</button>
                         <div id="slider-6" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth hide-scrollbar aspect-video w-full">
-                            <img src="{{ asset('images/lab1.png') }}" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
-                            <img src="{{ asset('images/lab2.png') }}" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
-                            <img src="{{ asset('images/lab3.png') }}" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
-                            <img src="{{ asset('images/lab4.png') }}" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
+                            <img src="./images/lab1.png" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
+                            <img src="./images/lab2.png" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
+                            <img src="./images/lab3.png" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
+                            <img src="./images/lab4.png" class="w-full aspect-video shrink-0 snap-center object-contain cursor-zoom-in bg-[#1e1e1e]" onclick="openModal(this.src)">
                         </div>
                         <button onclick="slide('slider-6', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 clay-btn-secondary w-10 h-10 flex items-center justify-center opacity-0 group-hover:opacity-100 z-10">&rarr;</button>
                     </div>
@@ -732,8 +732,7 @@
             </div>
 
             <div class="clay-card p-8 md:p-12 mx-auto">
-                <form id="contact-form" action="#" method="POST" class="space-y-6">
-                    @csrf
+                <form id="contact-form" action="https://formspree.io/f/xaqrrezg" method="POST" class="space-y-6">
                     <div>
                         <label for="name" class="block text-sm font-bold mb-2 text-matcha-dark uppercase tracking-wider">Your Name</label>
                         <input type="text" id="name" name="name" required class="clay-input w-full px-5 py-4 text-matcha-dark focus:ring-4 focus:ring-matcha-base/20 transition-all" placeholder="John Doe">
@@ -758,7 +757,7 @@
             </div>
 
             <div class="text-center mt-20">
-                <p class="text-matcha-brown/50 text-sm font-medium tracking-wide">&copy; {{ date('Y') }} Camille Precious Lalaguna.</p>
+                <p class="text-matcha-brown/50 text-sm font-medium tracking-wide">&copy; 2026 Camille Precious Lalaguna.</p>
             </div>
         </div>
     </section>
